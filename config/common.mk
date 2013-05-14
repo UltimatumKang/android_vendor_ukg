@@ -100,8 +100,8 @@ PRODUCT_COPY_FILES += \
 
 # nfc
 PRODUCT_COPY_FILES += \
-    vendor/ukg/config/permissions/com.ultimate.android.xml:system/etc/permissions/com.ultimate.android.xml \
-    vendor/ukg/config/permissions/com.ultimate.nfc.enhanced.xml:system/etc/permissions/com.ultimate.nfc.enhanced.xml
+    vendor/ukg/config/permissions/com.ultimatum.android.xml:system/etc/permissions/com.ultimatum.android.xml \
+    vendor/ukg/config/permissions/com.ultimatum.nfc.enhanced.xml:system/etc/permissions/com.ultimatum.nfc.enhanced.xml
 
 # version
 RELEASE = false
