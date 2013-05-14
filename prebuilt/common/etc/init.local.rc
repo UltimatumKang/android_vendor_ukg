@@ -1,4 +1,4 @@
-# CyanogenMod Extras - Xylon
+# CyanogenMod Extras - XYUltimate
 
 on init
     export ANDROID_CACHE /cache
@@ -31,6 +31,7 @@ on boot
 on property:service.adb.tcp.port=5555
     stop adbd
     start adbd
+
 on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
