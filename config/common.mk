@@ -30,20 +30,13 @@ PRODUCT_PACKAGES += \
     Superuser \
     su \
     Torch \
+    uTool \
     Wallpapers
 
 # prebuilts
 PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
-    XYSettings
-
-# Superuser Packages
-PRODUCT_PACKAGES += \
-    Superuser \
-    su
-
-SUPERUSER_PACKAGE := com.ukg.superuser
 
 # tools
 PRODUCT_PACKAGES += \
@@ -141,7 +134,7 @@ endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Xylon Devs!)
 ifdef UKG_BUILDTYPE
 else
-    UKG_BUILDTYPE := UNOFFICIAL
+    UKG_BUILDTYPE := EXPERIMENTAL
     UKG_VERSION_MAJOR :=
     UKG_VERSION_MINOR :=
 endif
