@@ -1,4 +1,4 @@
-#SUPERUSER_EMBEDDED := true
+SUPERUSER_EMBEDDED := true
 
 # brand
 PRODUCT_BRAND ?= Ultimatum
