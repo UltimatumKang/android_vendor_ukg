@@ -33,6 +33,12 @@ PRODUCT_PACKAGES += \
     uTool \
     Wallpapers
 
+# dspmanager
+PRODUCT_PACKAGES += \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf
+
 # prebuilts
 PRODUCT_PACKAGES += \
     GooManager \
