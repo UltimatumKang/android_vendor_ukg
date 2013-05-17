@@ -18,7 +18,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # packages
 PRODUCT_PACKAGES += \
     Camera \
+    CellBroadcastReceiver \
     DashClock \
+    DefaultUKGWallpapers \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
@@ -141,7 +143,7 @@ endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Xylon Devs!)
 ifdef UKG_BUILDTYPE
 else
-    UKG_BUILDTYPE := EXPERIMENTAL
+    UKG_BUILDTYPE := RELEASE
     UKG_VERSION_MAJOR :=
     UKG_VERSION_MINOR :=
 endif
