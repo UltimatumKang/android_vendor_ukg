@@ -47,10 +47,6 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
 
-# tools
-PRODUCT_PACKAGES += \
-    CellBroadcastReceiver
-
 PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
@@ -143,7 +139,7 @@ endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Xylon Devs!)
 ifdef UKG_BUILDTYPE
 else
-    UKG_BUILDTYPE := RELEASE
+    UKG_BUILDTYPE := EXPERIMENTAL
     UKG_VERSION_MAJOR :=
     UKG_VERSION_MINOR :=
 endif
