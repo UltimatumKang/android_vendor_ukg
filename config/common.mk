@@ -109,9 +109,9 @@ PRODUCT_COPY_FILES += \
     vendor/ukg/config/permissions/com.ultimatum.nfc.enhanced.xml:system/etc/permissions/com.ultimatum.nfc.enhanced.xml
 
 # version
-RELEASE = false
-UKG_VERSION_MAJOR = 1
-UKG_VERSION_MINOR = 1
+RELEASE = true
+UKG_VERSION_MAJOR = 2
+UKG_VERSION_MINOR = 9
 UKG_VERSION_MAINTAINENCE = 0
 
 #Set UKG_BUILDTYPE and goo.im properties
@@ -139,16 +139,16 @@ endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Xylon Devs!)
 ifdef UKG_BUILDTYPE
 else
-    UKG_BUILDTYPE := EXPERIMENTAL
+    UKG_BUILDTYPE := RELEASE
     UKG_VERSION_MAJOR :=
     UKG_VERSION_MINOR :=
 endif
 
-#Set Ultimatum version
+#Set Ultimatum-XYLON version
 ifdef UKG_RELEASE
-    UKG_VERSION := "UKG_4.2.2_"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
+    UKG_VERSION := "uXYLON_4.2.2_"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
 else
-    UKG_VERSION := "UKG-$(UKG_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M%S)
+    UKG_VERSION := "uXYLON-$(UKG_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M%S)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
