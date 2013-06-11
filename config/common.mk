@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     DashClock \
     DefaultUKGWallpapers \
     Galaxy4 \
+    HALO \
     HoloSpiralWallpaper \
     LiveWallpapers \
     Launcher2 \
