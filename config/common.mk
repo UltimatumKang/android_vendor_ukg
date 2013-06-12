@@ -109,6 +109,11 @@ PRODUCT_COPY_FILES += \
     vendor/ukg/config/permissions/com.ultimatum.android.xml:system/etc/permissions/com.ultimatum.android.xml \
     vendor/ukg/config/permissions/com.ultimatum.nfc.enhanced.xml:system/etc/permissions/com.ultimatum.nfc.enhanced.xml
 
+# zram
+PRODUCT_COPY_FILES += \
+    vendor/ukg/prebuilt/common/bin/compcache:system/bin/compcache \
+    vendor/ukg/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
+
 # version
 RELEASE = true
 UKG_VERSION_MAJOR = 2
