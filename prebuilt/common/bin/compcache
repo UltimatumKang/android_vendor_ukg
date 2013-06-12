@@ -19,7 +19,7 @@ fi
 case "$1" in
    start)
       echo 3 > /proc/sys/vm/drop_caches
-      echo 30 > /proc/sys/vm/swappiness
+      echo 10 > /proc/sys/vm/swappiness
       modprobe $MODULE
       if [ $MODULE = ramzswap ]; then
           rzscontrol $DEV --disksize_kb=$2 --init
