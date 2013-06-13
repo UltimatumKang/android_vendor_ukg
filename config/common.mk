@@ -64,6 +64,12 @@ PRODUCT_PACKAGES += \
     ssh-keygen \
     start-ssh
 
+# Enable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+
+# Insecure
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+
 # languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
