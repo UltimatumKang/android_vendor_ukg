@@ -52,7 +52,15 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
-    nano
+	nano \
+	htop \
+	powertop \
+	lsof \
+	mount.exfat \
+	fsck.exfat \
+	mkfs.exfat \
+	ntfsfix \
+	ntfs-3g
 
 # Openssh
 PRODUCT_PACKAGES += \
