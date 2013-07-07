@@ -120,14 +120,17 @@ UKG_VERSION_MAJOR = 2
 UKG_VERSION_MINOR = 9
 UKG_VERSION_MAINTAINENCE = 0
 
-#Set UKG_BUILDTYPE and goo.im properties
-ifdef UKG_NIGHTLY
-    UKG_BUILDTYPE := NIGHTLY
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=ukgnightly \
-        ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date +%Y%m%d)
+ifdef UKG_RELEASE
+else
+    UKG_VERSION := "uXYLON_4.2.2_"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
 endif
+
+ifdef UKG_EXPERIMENTAL
+else
+    UKG_VERSION := "uXYLON-EXPERIMENTAL"-$(shell date -u %Y%m%d-%H%M%S)
+endif
+
+#Set UKG_BUILDTYPE and goo.im properties
 ifdef UKG_EXPERIMENTAL
     UKG_BUILDTYPE := EXPERIMENTAL
     PRODUCT_PROPERTY_OVERRIDES += \
@@ -148,13 +151,6 @@ else
     UKG_BUILDTYPE := RELEASE
     UKG_VERSION_MAJOR :=
     UKG_VERSION_MINOR :=
-endif
-
-#Set Ultimatum-XYLON version
-ifdef UKG_RELEASE
-    UKG_VERSION := "uXYLON_4.2.2_"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
-else
-    UKG_VERSION := "uXYLON-$(UKG_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M%S)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
