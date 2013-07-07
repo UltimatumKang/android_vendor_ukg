@@ -126,21 +126,21 @@ ifdef UKG_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=ukgnightly \
         ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date -u +%Y%m%d)
 endif
 ifdef UKG_EXPERIMENTAL
     UKG_BUILDTYPE := EXPERIMENTAL
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=ukgexp \
         ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date -u +%Y%m%d)
 endif
 ifdef UKG_RELEASE
     UKG_BUILDTYPE := RELEASE
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=ukgrelease \
         ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date -u +%Y%m%d)
 endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Xylon Devs!)
 ifdef UKG_BUILDTYPE
@@ -154,7 +154,7 @@ endif
 ifdef UKG_RELEASE
     UKG_VERSION := "uXYLON_4.2.2_"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
 else
-    UKG_VERSION := "uXYLON-$(UKG_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M%S)
+    UKG_VERSION := "uXYLON-$(UKG_BUILDTYPE)"-$(shell date -u +%Y%m%d)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
