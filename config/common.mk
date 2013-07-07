@@ -115,35 +115,25 @@ PRODUCT_COPY_FILES += \
     vendor/ukg/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
 # version
-RELEASE = true
+RELEASE = false
 UKG_VERSION_MAJOR = 2
 UKG_VERSION_MINOR = 9
-UKG_VERSION_MAINTAINENCE = 0
-
-ifdef UKG_RELEASE
-else
-    UKG_VERSION := "uXYLON_4.2.2_"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
-endif
-
-ifdef UKG_EXPERIMENTAL
-else
-    UKG_VERSION := "uXYLON-EXPERIMENTAL"-$(shell date -u %Y%m%d-%H%M%S)
-endif
+UKG_VERSION_MAINTAINENCE = 1
 
 #Set UKG_BUILDTYPE and goo.im properties
 ifdef UKG_EXPERIMENTAL
     UKG_BUILDTYPE := EXPERIMENTAL
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=ukgexp \
-        ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date -u +%Y%m%d)
+#        ro.goo.rom=ukgexp \
+#        ro.goo.developerid=ultimatumkang \
+#        ro.goo.version=$(shell date -u +%Y%m%d)
 endif
 ifdef UKG_RELEASE
     UKG_BUILDTYPE := RELEASE
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=ukgrelease \
-        ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date -u +%Y%m%d)
+#        ro.goo.rom=ukgrelease \
+#        ro.goo.developerid=ultimatumkang \
+#        ro.goo.version=$(shell date -u +%Y%m%d)
 endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Xylon Devs!)
 ifdef UKG_BUILDTYPE
@@ -151,6 +141,14 @@ else
     UKG_BUILDTYPE := RELEASE
     UKG_VERSION_MAJOR :=
     UKG_VERSION_MINOR :=
+    UKG_VERSION_MAINTAINENCE :=
+endif
+
+#Set Ultimatum version
+ifdef UKG_RELEASE
+    UKG_VERSION := "uXYLON-JB422-v"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
+else
+    UKG_VERSION := "uXYLON-JB422-$(UKG_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
