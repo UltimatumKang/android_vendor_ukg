@@ -136,14 +136,14 @@ ifdef UKG_EXPERIMENTAL
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=ukgexp \
         ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date -u +%Y%m%d)
 endif
 ifdef UKG_RELEASE
     UKG_BUILDTYPE := RELEASE
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=ukgrelease \
         ro.goo.developerid=ultimatumkang \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date -u +%Y%m%d)
 endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Xylon Devs!)
 ifdef UKG_BUILDTYPE
