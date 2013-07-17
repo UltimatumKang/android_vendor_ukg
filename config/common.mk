@@ -15,6 +15,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
+# SELinux filesystem labels
+PRODUCT_COPY_FILES += \
+    vendor/ukg/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+
+# Don't export PS1 in /system/etc/mkshrc.
+PRODUCT_COPY_FILES += \
+    vendor/ukg/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+
 # packages
 PRODUCT_PACKAGES += \
     Camera \
