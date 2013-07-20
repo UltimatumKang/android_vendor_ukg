@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
 
 # packages
 PRODUCT_PACKAGES += \
+    Babel \
     Camera \
     CellBroadcastReceiver \
     DashClock \
@@ -130,12 +131,6 @@ PRODUCT_COPY_FILES += \
     vendor/ukg/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/ukg/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
-# version
-RELEASE = false
-UKG_VERSION_MAJOR = 2
-UKG_VERSION_MINOR = 9
-UKG_VERSION_MAINTAINENCE = 1
-
 #Set UKG_BUILDTYPE and goo.im properties
 ifdef UKG_EXPERIMENTAL
     UKG_BUILDTYPE := EXPERIMENTAL
@@ -160,11 +155,17 @@ else
     UKG_VERSION_MAINTAINENCE :=
 endif
 
+# version
+RELEASE = false
+UKG_VERSION_MAJOR = 2
+UKG_VERSION_MINOR = 9
+UKG_VERSION_MAINTAINENCE = 5
+
 #Set Ultimatum version
 ifdef UKG_RELEASE
-    UKG_VERSION := "uXYLON-JB422-v"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
-else
     UKG_VERSION := "uXYLON-JB422-$(UKG_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
+else
+    UKG_VERSION := "uXYLON-JB422-v"$(UKG_VERSION_MAJOR).$(UKG_VERSION_MINOR).$(UKG_VERSION_MAINTAINENCE)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
