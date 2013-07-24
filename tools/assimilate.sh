@@ -3,14 +3,13 @@ echo What is the brand of the device?
 read brand
 echo What is the device\'s codename?
 read device
-echo 'What is the shortened codename of the device (eg. GN for Galaxy Nexus)'
-read release_name
 echo 'What wireless technology does the device use? (GSM or CDMA) (Use lowercase)'
 read radio
 echo 'What is the DPI of the device?'
 read dpi
 echo Ripping things from cm.mk...
 cd device/$brand/$device
+release_name=$(cat cm.mk | grep PRODUCT_RELEASE_NAME
 PRODUCT_MODEL=$(cat cm.mk | grep PRODUCT_MODEL)
 etc=$(cat cm.mk | grep PRODUCT_BUILD_PROP_OVERRIDES)
 echo Generating ukg.mk
