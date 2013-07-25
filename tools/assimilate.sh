@@ -9,7 +9,7 @@ echo 'What is the DPI of the device?'
 read dpi
 echo Ripping things from cm.mk...
 cd device/$brand/$device
-release_name=$(cat cm.mk | grep PRODUCT_RELEASE_NAME
+release_name=$(cat cm.mk | grep PRODUCT_RELEASE_NAME)
 PRODUCT_MODEL=$(cat cm.mk | grep PRODUCT_MODEL)
 etc=$(cat cm.mk | grep PRODUCT_BUILD_PROP_OVERRIDES)
 echo Generating ukg.mk
@@ -32,7 +32,7 @@ echo '#
 #
 
 # name' > ukg.mk
-echo 'PRODUCT_RELEASE_NAME := '$release_name >> ukg.mk
+echo $release_name >> ukg.mk
 echo '
 # device' >> ukg.mk
 echo '$(call inherit-product-if-exists, device/'$brand'/'$device'/full_'$device'.mk)' >> ukg.mk
