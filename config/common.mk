@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Babel \
     Camera \
+    Development \
     CellBroadcastReceiver \
     DashClock \
     DefaultUKGWallpapers \
