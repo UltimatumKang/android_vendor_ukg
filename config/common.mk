@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Babel \
     Camera \
+    Development \
     CellBroadcastReceiver \
     DashClock \
     DefaultUKGWallpapers \
@@ -159,7 +160,7 @@ endif
 RELEASE = false
 UKG_VERSION_MAJOR = 2
 UKG_VERSION_MINOR = 9
-UKG_VERSION_MAINTAINENCE = 5
+UKG_VERSION_MAINTAINENCE = 7
 
 #Set Ultimatum version
 ifdef UKG_RELEASE
