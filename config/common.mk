@@ -25,7 +25,6 @@ PRODUCT_COPY_FILES += \
 
 # packages
 PRODUCT_PACKAGES += \
-    Babel \
     Camera \
     Development \
     CellBroadcastReceiver \
@@ -45,6 +44,7 @@ PRODUCT_PACKAGES += \
     su \
     Torch \
     uTool \
+	VoicePlus \
     Wallpapers
 
 # dspmanager
