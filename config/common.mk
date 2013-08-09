@@ -44,7 +44,7 @@ PRODUCT_PACKAGES += \
     su \
     Torch \
     uTool \
-	VoicePlus \
+    VoicePlus \
     Wallpapers
 
 # dspmanager
